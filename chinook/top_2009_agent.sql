@@ -5,8 +5,7 @@ Hint: Use the MAX function on a subquery.  ??
 
 --steves solution max total value of sales
 select
-	max(Sales.TotalSales) as TopSales,
-	Sales.EmployeeName
+	max(Sales.TotalSales) as TopSales, Sales.EmployeeName
 from
 	(select
 		sum(i.total) TotalSales,
